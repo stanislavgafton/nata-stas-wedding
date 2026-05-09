@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nătălița & Stas · 20.09.2026</title>
+  <meta name="description" content="Vă invităm cu drag la nunta noastră! · 20 Septembrie 2026 · Lago Event Park, Dănceni" />
+
+  <!-- Open Graph (preview when shared on WhatsApp / Telegram / Facebook) -->
+  <meta property="og:title" content="Nătălița & Stas — Ne căsătorim! 20.09.2026" />
+  <meta property="og:description" content="Vă invităm cu drag să fiți alături de noi la celebrarea căsătoriei noastre!" />
+  <meta property="og:image" content="assets/dog-ring.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+
+  <!-- Language toggle -->
+  <nav class="lang-toggle" aria-label="Language">
+    <button data-lang="ro" class="active" type="button">RO</button>
+    <button data-lang="en" type="button">EN</button>
+    <button data-lang="it" type="button">IT</button>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="script" data-i18n="hero_title">Ne-am hotărât</h1>
+      <p class="subtle" data-i18n="hero_sub">să devenim oameni serioși</p>
+      <div class="hero-photo">
+        <img src="assets/dog-ring.jpg" alt="" onerror="this.parentElement.classList.add('photo-missing'); this.remove();" />
+      </div>
+      <p class="hero-foot" data-i18n="hero_foot">Și…ne căsătorim!</p>
+    </section>
+
+    <!-- Couple -->
+    <section class="couple">
+      <h2 class="script" data-i18n="we">Noi,</h2>
+      <p class="names">Nătălița &amp; Stas</p>
+      <hr class="gold" />
+    </section>
+
+    <!-- Parents & godparents -->
+    <section class="family">
+      <p data-i18n="parents_intro">Alături de părinții noștri dragi:</p>
+      <p class="bold">Elena &amp; Igor</p>
+      <p class="bold">Tatiana &amp; Veaceslav</p>
+      <p data-i18n="godparents_intro" class="mt">Și de nașii noștri minunați:</p>
+      <p class="bold">Doina &amp; Alexandru</p>
+      <hr class="gold" />
+    </section>
+
+    <!-- Invitation line -->
+    <section class="invite">
+      <p data-i18n="invite_line">Vă invităm cu drag să fiți alături de noi la celebrarea căsătoriei noastre!</p>
+    </section>
+
+    <!-- Calendar -->
+    <section class="calendar">
+      <h2 class="script" data-i18n="month">Septembrie</h2>
+      <table class="cal" aria-label="September 2026">
+        <thead>
+          <tr>
+            <th data-i18n="d_mo">Lu</th><th data-i18n="d_tu">Ma</th><th data-i18n="d_we">Mie</th>
+            <th data-i18n="d_th">Joi</th><th data-i18n="d_fr">Vi</th><th data-i18n="d_sa">Sâm</th><th data-i18n="d_su">Dum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+          <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td><span class="heart-day">20</span></td></tr>
+          <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+          <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Venue -->
+    <section class="venue">
+      <p class="caps" data-i18n="restaurant">RESTAURANT</p>
+      <div class="venue-row">
+        <span class="venue-side" data-i18n="day">Duminică</span>
+        <span class="script venue-name">Lago Event Park</span>
+        <span class="venue-side">15:00</span>
+      </div>
+      <p class="venue-loc">
+        <a href="https://maps.google.com/?q=Lago+Event+Park+Danceni+Chisinau" target="_blank" rel="noopener">
+          <span data-i18n="city">or. Chișinău, Dănceni</span>
+        </a>
+      </p>
+    </section>
+
+    <!-- Gift note -->
+    <section class="gift">
+      <p data-i18n="gift_note">Vom fi recunoscători dacă tradiționalul buchet de flori va fi înlocuit cu o carte sau o sticlă de vin!</p>
+    </section>
+
+    <!-- Add to calendar -->
+    <section class="actions">
+      <a class="btn" href="wedding.ics" download data-i18n="add_calendar">📅 Adaugă în calendar</a>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp">
+      <h2 class="script" data-i18n="rsvp_title">Confirmă prezența</h2>
+      <p class="rsvp-deadline">
+        <span data-i18n="rsvp_deadline_pre">Vă rugăm să confirmați până la</span>
+        <strong data-i18n="rsvp_deadline_date">15 iulie 2026</strong>
+      </p>
+
+      <!-- ============================================================ -->
+      <!--  REPLACE the iframe below with the one from your Google Form  -->
+      <!--  (Form → Send → <> Embed HTML)                                -->
+      <!-- ============================================================ -->
+      <div class="form-wrap">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6kmZhpXkBSakO0xfctCH8fnyGUDA0QtXG_JsEkQsFrwVWlg/viewform?embedded=true" width="640" height="918" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
+        <p class="form-placeholder">
+          <span data-i18n="form_placeholder">Formularul de confirmare va apărea aici. (Lipiți codul iframe Google Form.)</span>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="script footer-sign">Cu drag,</p>
+      <p class="names small">Nătălița &amp; Stas 🤍</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
