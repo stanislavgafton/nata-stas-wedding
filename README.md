@@ -18,25 +18,48 @@ assets/dog-ring.jpg
 
 Recommended size: ~1200×1600 px, JPG, under ~500 KB. Until you add it, the page shows a subtle placeholder block — the rest of the design still looks correct.
 
-### 2. Create the Google Form (the RSVP system)
+### 2. Create the Airtable RSVP base
 
-Sign in to [forms.google.com](https://forms.google.com) **with the personal Gmail you want to own the responses**, then:
+We use Airtable instead of Google Forms because the responses land in a colorful sortable database (with green/red color-coding, totals row, kanban view, and a real mobile app) — much friendlier to scan than a plain spreadsheet.
 
-1. Create a blank form. Title it: **Confirmare Nuntă · Nătălița & Stas**
-2. Add these four questions:
+Sign up at [airtable.com](https://airtable.com) **with the personal Gmail you want to own the responses**, then:
 
-   | # | Question (paste all 3 languages in the title) | Type | Required |
-   |---|----------------------------------------------|------|----------|
-   | 1 | Nume / Name / Nome | Short answer | ✅ |
-   | 2 | Veniți? / Will you attend? / Verrai? | Multiple choice — options: `Da · Yes · Sì`  and  `Nu · No · No` | ✅ |
-   | 3 | Câte persoane? / How many people? / Quante persone? | Dropdown 1–6 | optional |
-   | 4 | Restricții alimentare sau un mesaj / Dietary restrictions or a message / Restrizioni alimentari o un messaggio | Paragraph | optional |
+1. **Create a new base** called **Nuntă Nătălița & Stas**, with one table called `RSVP`.
+2. **Define these fields** (delete the default columns):
 
-3. **Responses tab → ⋮ menu (top-right of the responses tab) → "Get email notifications for new responses"** → toggle ON. Now every RSVP also pings your inbox.
-4. **Responses tab → green Sheets icon** → "Create new spreadsheet" → done. All responses now also land in a Google Sheet.
-5. Open that Sheet → **Share button** → add Nătălița's Gmail with **Editor** permission.
-6. Back on the form: **Send button → `<>` Embed HTML tab** → copy the entire `<iframe …></iframe>` snippet.
-7. Open `index.html`, find the comment **`REPLACE the iframe below`** (around line 110), and replace the placeholder `<iframe …></iframe>` with the snippet you copied. Set `width="100%"` and `height="900"` if it isn't already.
+   | Field | Type | Notes |
+   |---|---|---|
+   | `Nume` | Single line text | Primary field (rename "Name" to this) |
+   | `Vine?` | Single select | Two options: `Da · Sì` (color: green) and `Nu · No` (color: red) |
+   | `Persoane` | Number | Integer, 0–6 |
+   | `Mesaj` | Long text | Optional — dietary or note |
+   | `Trimis la` | Created time | Auto-populated timestamp, no setup |
+
+3. **Add useful views**:
+   - `Summary` view → Grid type → group by `Vine?`, add a footer with `SUM(Persoane)` to see total attendees instantly.
+   - `Kanban` view → group by `Vine?` → great for checking on phone.
+
+4. **Create the form**: in the table tab → **Create…** → **Form view** → name it `Confirmare nuntă`. Drag in the four user-facing fields (`Nume`, `Vine?`, `Persoane`, `Mesaj`) — leave `Trimis la` off, it auto-fills.
+
+5. **Customize the form** for bilingual guests:
+   - Title: `Confirmă prezența · Nătălița & Stas`
+   - Subtitle: `Vă rugăm să confirmați până la 15 iulie 2026 / Si prega di confermare entro il 15 luglio 2026`
+   - Field labels (paste both languages, e.g. `Nume / Nome`, `Vine? / Verrai?`, `Persoane / Persone`, `Mesaj / Messaggio`)
+   - Mark `Nume` and `Vine?` as required.
+
+6. **Email notifications**: form view → settings (gear icon) → toggle **"Email me at <gmail>"** ON. You get an email every time someone RSVPs.
+
+7. **Share the base with Nătălița**: top-right **Share** button → add her Gmail → **Editor** access. She installs the Airtable mobile app and sees RSVPs live, color-coded, with totals.
+
+8. **Get the embed code**: Form view → **Share form** button → **Embed this view on your site** → copy the `<iframe …>` snippet. It looks like:
+   ```html
+   <iframe class="airtable-embed"
+           src="https://airtable.com/embed/appXXXXXX/shrYYYYYY?backgroundColor=…"
+           frameborder="0" onmousewheel="" width="100%" height="900"
+           style="background: transparent;"></iframe>
+   ```
+
+9. **Paste into the site**: open `index.html`, find the comment block **`Airtable RSVP form`** (around line 118), and replace the placeholder `src="<<PASTE_AIRTABLE_EMBED_SRC_HERE>>"` with your real `src` URL. Then `git commit` + `git push`.
 
 ### 3. (Optional) Edit the RSVP deadline
 
