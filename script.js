@@ -19,26 +19,6 @@ const i18n = {
     rsvp_deadline_date: "15 iulie 2026",
     form_placeholder: "Formularul de confirmare va apărea aici. (Lipiți codul iframe Google Form.)"
   },
-  en: {
-    hero_title: "We've decided",
-    hero_sub: "to get serious",
-    hero_foot: "And…we're getting married!",
-    we: "We,",
-    parents_intro: "Together with our dear parents:",
-    godparents_intro: "And our wonderful godparents:",
-    invite_line: "We warmly invite you to celebrate our wedding with us!",
-    month: "September",
-    d_mo: "Mon", d_tu: "Tue", d_we: "Wed", d_th: "Thu", d_fr: "Fri", d_sa: "Sat", d_su: "Sun",
-    restaurant: "RESTAURANT",
-    day: "Sunday",
-    city: "Chișinău, Dănceni",
-    gift_note: "We'd be grateful if the traditional bouquet of flowers were replaced with a book or a bottle of wine!",
-    add_calendar: "📅 Add to calendar",
-    rsvp_title: "RSVP",
-    rsvp_deadline_pre: "Please confirm by",
-    rsvp_deadline_date: "July 15, 2026",
-    form_placeholder: "The RSVP form will appear here. (Paste your Google Form iframe code.)"
-  },
   it: {
     hero_title: "Abbiamo deciso",
     hero_sub: "di fare sul serio",

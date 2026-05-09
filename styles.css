@@ -197,7 +197,7 @@ table.cal td {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .venue-side {
   font-size: 0.95rem;
@@ -209,7 +209,12 @@ table.cal td {
   font-size: clamp(2rem, 7vw, 2.6rem);
 }
 .venue-loc { margin-top: 14px; font-size: 1rem; }
-.venue-loc a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+.venue-loc a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
 .venue-loc a:hover { color: var(--gold); }
 
 /* === Gift === */
@@ -292,4 +297,11 @@ footer {
   section { margin: 44px 0; }
   table.cal th, table.cal td { padding: 8px 0; font-size: 0.95rem; }
   .heart-day { width: 32px; height: 32px; font-size: 0.85rem; }
+
+  .venue-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .venue-side { border-bottom: none; padding: 0; }
+  .venue-name { order: -1; margin-bottom: 4px; }
 }
