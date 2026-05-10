@@ -123,7 +123,12 @@
                 src="https://airtable.com/embed/appTacZEC9u30KAZr/shrRU9zZl7lKrEwvF"
                 frameborder="0" onmousewheel="" width="100%" height="800"
                 style="background: transparent;"
-                title="RSVP">Loading…</iframe>
+                title="RSVP"
+                onload="this.parentElement.classList.add('loaded')">Loading…</iframe>
+        <div class="form-loader" aria-hidden="true">
+          <div class="spinner"></div>
+          <p data-i18n="form_loading">Se încarcă formularul…</p>
+        </div>
         <p class="form-placeholder">
           <span data-i18n="form_placeholder">Formularul de confirmare va apărea aici. (Lipiți codul iframe Google Form.)</span>
         </p>

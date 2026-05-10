@@ -17,7 +17,8 @@ const i18n = {
     rsvp_title: "Confirmă prezența",
     rsvp_deadline_pre: "Vă rugăm să confirmați până la",
     rsvp_deadline_date: "15 iulie 2026",
-    form_placeholder: "Formularul de confirmare va apărea aici. (Lipiți codul iframe Google Form.)"
+    form_placeholder: "Formularul de confirmare va apărea aici. (Lipiți codul iframe Google Form.)",
+    form_loading: "Se încarcă formularul…"
   },
   it: {
     hero_title: "Abbiamo deciso",
@@ -37,7 +38,8 @@ const i18n = {
     rsvp_title: "Conferma presenza",
     rsvp_deadline_pre: "Si prega di confermare entro il",
     rsvp_deadline_date: "15 luglio 2026",
-    form_placeholder: "Il modulo di conferma apparirà qui. (Incolla il codice iframe del Google Form.)"
+    form_placeholder: "Il modulo di conferma apparirà qui. (Incolla il codice iframe del Google Form.)",
+    form_loading: "Caricamento del modulo…"
   }
 };
 

@@ -279,6 +279,32 @@ table.cal td {
 /* Hide placeholder once a real iframe is in place */
 .form-wrap iframe:not([data-placeholder]) ~ .form-placeholder { display: none; }
 
+.form-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  background: #ffffff;
+  border-radius: 8px;
+  pointer-events: none;
+  transition: opacity 0.4s ease 0.2s;
+}
+.form-loader .spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--gold-soft);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+.form-wrap.loaded .form-loader { opacity: 0; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
 /* === Footer === */
 footer {
   text-align: center;
